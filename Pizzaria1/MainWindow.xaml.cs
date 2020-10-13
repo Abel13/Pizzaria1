@@ -32,7 +32,10 @@ namespace Pizzaria1
 
         private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
         {
-            DragMove();
+            if (e.LeftButton == MouseButtonState.Pressed)
+            {
+                DragMove();
+            }
         }
 
         private void ListViewMenu_SelectionChanged(object sender, SelectionChangedEventArgs e)
